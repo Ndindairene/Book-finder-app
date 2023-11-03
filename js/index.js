@@ -13,9 +13,20 @@ document.getElementById("searchButton").addEventListener("click", () => {
   }
 });
 
+// fetching data from the public API
 function searchBooks(Query) {
+ const maxResults = 10;
+ 
+ const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=${maxResults}&key=${APIKEY}`;
 
+ fetch (apiUrl)
+ .then((response) => response.json())
+ .then((data) => {
+  displayResults(data.items);
+ })
+ .catch((err) => {
+  console.error('Error fetching results', err);
+ })
+ 
 }
-
-
 })
