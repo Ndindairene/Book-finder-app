@@ -1,18 +1,24 @@
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
 .svg-icon {
-    width: 1em;
-    height: 1em;
+    width: 2em;
+    height: 2em;
   }
   
   .svg-icon path,
   .svg-icon polygon,
   .svg-icon rect {
-    fill: #4691f6;
+    fill: hsl(216, 38%, 5%);
   }
   
   .svg-icon circle {
-    stroke: #4691f6;
+    stroke: #4691f6;;
     stroke-width: 1;
   }
+
+
 
   /* inputed styles */
 
@@ -24,15 +30,47 @@
     background-color: white;
     border-radius: 60px;
     padding: 5px;
-    margin: 1rem;
+    margin: 1rem auto;
+    border: 2px solid #white;
+
 }
 
 .searchInput {
     width: 100%;
     border: none;
     background-color: transparent;
+    border-radius: none;
+    
 }
 
 body {
     background-color: blanchedalmond;
 }
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.searchButton {
+    border: none;
+    background-color: white;
+
+}
+
+#results {
+    margin-top: 20px;
+  }
+
+  .book {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    max-width: 100px;
+    height: auto;
+  }
