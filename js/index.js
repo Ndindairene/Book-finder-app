@@ -12,4 +12,10 @@ document.getElementById("searchButton").addEventListener("click", () => {
     searchBooks(searchInput);
   }
 });
+
+function searchBooks(Query) {
+
+}
+
+
 })
