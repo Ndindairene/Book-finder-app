@@ -22,8 +22,7 @@ SVG Icons - svgicons.sparkk.fr
 
 
 /* inputed styles */
-
-.find{
+.find {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,21 +31,18 @@ SVG Icons - svgicons.sparkk.fr
   border-radius: 60px;
   padding: 5px;
   margin: 1rem auto;
-  border: 2px solid #white;
-
+  border: 2px solid white;
 }
 
 .searchInput {
   width: 100%;
   border: none;
   background-color: transparent;
-  border-radius: none;
-  
+  border-radius: 0; /* Change "none" to "0" */
 }
 
 body {
   background-color: aqua;
-
 }
 
 h1 {
@@ -57,23 +53,88 @@ h1 {
 .searchButton {
   border: none;
   background-color: white;
-
 }
 
 #results {
   margin-top: 20px;
-  
-}
-
-.book {
-  border: 1px solid #ccc;
+  max-width: 100%; /* Removed "px" */
+  margin: auto;
+  border-radius: 10px;
   padding: 10px;
-  margin: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 img {
-  max-width: 100px;
+  max-width: 200px;
   height: auto;
-};
+}
+
+.book {
+  display: flex;
+  flex-wrap: wrap;
+  width: 48%;
+  margin: 1%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.book img {
+  max-width: 40%;
+  margin-right: 10px;
+}
+
+.book h2 {
+  flex: 1;
+  margin: 0;
+}
+
+.book p {
+  flex: 1;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Style for the book element */
+.book {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the book image */
+.book-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the book title */
+.book-title {
+  font-size: 16px;
+  font-weight: bold;
+  /* Removed the extra semicolon */
+}
+
+/* Style for the book authors */
+.book-authors {
+  font-size: 14px;
+}
+
+/* Style for the book publisher */
+.book-publisher {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+}
