@@ -35,37 +35,61 @@ const APIKEY = "AIzaSyBh8dlHW3oIhYshT0qT3ePRcN2eb6wzgxc";
     }
   });
 
-  // A function to update the author and description in the bookDetails div
   function displayResults(books) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
-
+  
     if (books) {
-      books.forEach((book) => {
-        const bookInfo = book.volumeInfo;
-        const title = bookInfo.title;
-        const authors = bookInfo.authors ? bookInfo.authors.join(', ') : 'Unknown';
-        const description = bookInfo.description || 'No description available';
-        const thumbnail = bookInfo.imageLinks ? bookInfo.imageLinks.thumbnail : 'no-image.png';
-
-        const bookElement = document.createElement('div');
-        bookElement.classList.add('book');
-        bookElement.innerHTML = `
-          <h2>${title}</h2>
-          <p>Author(s): ${authors}</p>
-          <img src="${thumbnail}" alt="${title} cover">
-          <button class="description-button">Description</button>
-          <p class="book-description" style="display: none;">${description}</p>
-        `;
-
-        resultsDiv.appendChild(bookElement);
-      });
+      for (let i = 0; i < books.length; i += 4) { // Display 4 books at a time
+        const rowContainer = document.createElement('div');
+        rowContainer.classList.add('row');
+        resultsDiv.appendChild(rowContainer);
+  
+        for (let j = i; j < i + 4&& j < books.length; j++) {
+          const book = books[j];
+          const bookInfo = book.volumeInfo;
+          const title = bookInfo.title;
+          const authors = bookInfo.authors ? bookInfo.authors.join(', ') : 'Unknown';
+          const publisher = bookInfo.publisher || 'Publisher not available';
+          const thumbnail = bookInfo.imageLinks ? bookInfo.imageLinks.thumbnail : 'no-image.png';
+  
+          const bookElement = document.createElement('div');
+          bookElement.classList.add('book');
+  
+          const imageDiv = document.createElement('div');
+          imageDiv.classList.add('book-image');
+          imageDiv.innerHTML = `<img src="${thumbnail}" alt="${title} cover">`;
+  
+          const infoDiv = document.createElement('div');
+          infoDiv.classList.add('info');
+  
+          const titleDiv = document.createElement('div');
+          titleDiv.classList.add('book-title');
+          titleDiv.textContent = title;
+  
+          const authorsDiv = document.createElement('div');
+          authorsDiv.classList.add('book-authors');
+          authorsDiv.textContent = `Author(s): ${authors}`;
+  
+          const publisherDiv = document.createElement('div');
+          publisherDiv.classList.add('book-publisher');
+          publisherDiv.textContent = `Publisher: ${publisher}`;
+  
+          infoDiv.appendChild(titleDiv);
+          infoDiv.appendChild(authorsDiv);
+          infoDiv.appendChild(publisherDiv);
+  
+          bookElement.appendChild(imageDiv);
+          bookElement.appendChild(infoDiv);
+  
+          rowContainer.appendChild(bookElement);
+        }
+      }
     } else {
       resultsDiv.innerHTML = 'No results found.';
     }
   }
+  
+
 });
-
-
-
-
+  
