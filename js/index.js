@@ -1,7 +1,18 @@
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  window.addEventListener('resize', function () {
+    const header = document.getElementById('header');
+    if (window.innerWidth < 768) {
+      header.style.fontSize = '16px'; // Reduce font size for smaller screens
+    } else {
+      header.style.fontSize = '24px'; // Restore font size for larger screens
+    }
+  });
+
   // Replace with your API key
 const APIKEY = "AIzaSyBh8dlHW3oIhYshT0qT3ePRcN2eb6wzgxc";
+
 
   // Adding an event listener to the search button
   document.getElementById('searchButton').addEventListener('click', () => {
