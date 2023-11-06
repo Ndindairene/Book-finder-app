@@ -109,6 +109,11 @@ img {
   
   
 }
+.red-heart-icon {
+  color: red;
+  border: none;
+  
+}
 
 .book-title {
   font-size: 16px;
