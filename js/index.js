@@ -29,14 +29,6 @@ const APIKEY = "AIzaSyBh8dlHW3oIhYshT0qT3ePRcN2eb6wzgxc";
       });
   }
 
-  // Adding event listener to the search results container
-  document.getElementById('results').addEventListener('click', function (e) {
-    if (e.target.classList.contains('description-button')) {
-      const description = e.target.nextElementSibling;
-      description.style.display = description.style.display === 'none' ? 'block' : 'none';
-    }
-  });
-
 const heartIcon = `
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
   <path d="M8 14s-2-1.5-3-3C4 10.5 2 9 2 7.5 2 5.5 3.5 4 5.5 4c1.3 0 2.543.693 3.5 1.685C9.957 4.693 11.2 4 12.5 4 14.5 4 16 5.5 16 7.5c0 1.5-2 3-3 3-1-1.5-3-3-3-3z"/>
