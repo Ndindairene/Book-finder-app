@@ -44,13 +44,10 @@ SVG Icons - svgicons.sparkk.fr
   outline: none;
 }
 
-body {
-  background-color: white;
-}
-
 h1 {
   text-align: center;
   margin-top: 100px;
+  color: brown;
 }
 
 .searchButton {
@@ -64,6 +61,7 @@ h1 {
   margin: auto;
   border-radius: 10px;
   padding: 10px;
+
 }
 
 img {
@@ -74,12 +72,6 @@ img {
 .book img {
   max-width: 40%;
   margin-right: 10px;
-}
-
-.book h2 {
-  flex: 1;
-  margin: 0;
-  text-align: center;
 }
 
 .book p {
@@ -107,15 +99,14 @@ img {
   margin: 20px;
   max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff
-  border: 1px solid #ccc;
-  
-  
+  background-color:white
+
 }
 
 .book-image img {
   max-width: 100%;
   height: auto;
+  
   
 }
 
@@ -124,19 +115,24 @@ img {
   font-weight: bold;
   padding-bottom: 20px;
   margin: 5px ;
+  color: black;
+  
 }
 
 .book-authors {
   font-size: 15px;
   margin-bottom: 30px;
+  color: black;
+  
 }
 
 .book-publisher {
   font-size: 14px;
   font-style: italic;
-  color: #666;
+  color: black;
+  
 }
 body {
-  background-image: url("../assets/backgroundimg.jpg");
+  background-image: url("../assets/bkgrdimg.jpg");
   background-size: cover;
 }
