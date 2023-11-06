@@ -38,7 +38,7 @@ SVG Icons - svgicons.sparkk.fr
   width: 100%;
   border: none;
   background-color: transparent;
-  border-radius: 0; /* Change "none" to "0" */
+  border-radius: 0; 
 }
 .searchInput:focus{
   outline: none;
@@ -57,7 +57,7 @@ h1 {
 
 #results {
   margin-top: 20px;
-  max-width: 100%; /* Removed "px" */
+  max-width: 100%; 
   margin: auto;
   border-radius: 10px;
   padding: 10px;
