@@ -40,9 +40,12 @@ SVG Icons - svgicons.sparkk.fr
   background-color: transparent;
   border-radius: 0; /* Change "none" to "0" */
 }
+.searchInput:focus{
+  outline: none;
+}
 
 body {
-  background-color: beige;
+  background-color: white;
 }
 
 h1 {
@@ -68,17 +71,6 @@ img {
   height: auto;
 }
 
-.book {
-  display: flex;
-  flex-wrap: wrap;
-  width: 48%;
-  margin: 1%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  background-color: white;
-}
-
 .book img {
   max-width: 40%;
   margin-right: 10px;
@@ -87,54 +79,64 @@ img {
 .book h2 {
   flex: 1;
   margin: 0;
+  text-align: center;
 }
 
 .book p {
   flex: 1;
   margin: 0;
+  
 }
 
 .row {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-sizing: border-box;
+  flex-wrap: nowrap;  
+  justify-content: space-between; 
+  align-items: center; 
+  margin: 0; 
+  padding: 0; 
+  border: none; 
 }
 
-/* Style for the book element */
+
 .book {
   display: flex;
-  align-items: flex-start;
+  align-items: centre;
   border: 1px solid #ccc;
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
   max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff
+  border: 1px solid #ccc;
+  
+  
 }
 
-/* Style for the book image */
 .book-image img {
   max-width: 100%;
   height: auto;
+  
 }
 
-/* Style for the book title */
 .book-title {
   font-size: 16px;
   font-weight: bold;
-  /* Removed the extra semicolon */
+  padding-bottom: 20px;
+  margin: 5px ;
 }
 
-/* Style for the book authors */
 .book-authors {
-  font-size: 14px;
+  font-size: 15px;
+  margin-bottom: 30px;
 }
 
-/* Style for the book publisher */
 .book-publisher {
   font-size: 14px;
   font-style: italic;
   color: #666;
+}
+body {
+  background-image: url("../assets/backgroundimg.jpg");
+  background-size: cover;
 }
